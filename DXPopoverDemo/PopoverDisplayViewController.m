@@ -90,7 +90,7 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
 
     [self.popover showAtPoint:startPoint popoverPostion:DXPopoverPositionDown withContentView:self.tableView inView:self.tabBarController.view];
     __weak typeof(self)weakSelf = self;
-    self.popover.didDimissHandler = ^{
+    self.popover.didDismissHandler = ^{
         [weakSelf bounceTargetView:titleView];
     };
 }
@@ -103,7 +103,7 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
     [self.popover showAtPoint:startPoint popoverPostion:DXPopoverPositionDown withContentView:self.tableView inView:self.tabBarController.view];
     
     __weak typeof(self)weakSelf = self;
-    self.popover.didDimissHandler = ^{
+    self.popover.didDismissHandler = ^{
         [weakSelf bounceTargetView:weakSelf.btn];
     };
 }
@@ -116,7 +116,7 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
     [self.popover showAtPoint:startPoint popoverPostion:DXPopoverPositionUp withContentView:self.tableView inView:self.tabBarController.view];
     
     __weak typeof(self)weakSelf = self;
-    self.popover.didDimissHandler = ^{
+    self.popover.didDismissHandler = ^{
         [weakSelf bounceTargetView:weakSelf.downBtn];
     };
 }

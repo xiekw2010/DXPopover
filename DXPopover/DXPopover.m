@@ -31,11 +31,11 @@
 {
     self = [super initWithFrame:CGRectZero];
     if (self) {
-        self.arrowSize = CGSizeMake(10.0, 8.0);
+        self.arrowSize = CGSizeMake(11.0, 9.0);
         self.cornerRadius = 7.0;
         self.backgroundColor = [UIColor clearColor];
         self.animationIn = 0.4;
-        self.animationOut = 0.2;
+        self.animationOut = 0.3;
         self.animationSpring = YES;
         self.sideEdge = 10.0;
         self.maskType = DXPopoverMaskTypeBlack;
@@ -106,9 +106,10 @@
     NSAssert(CGRectGetWidth(containerView.bounds)>=CGRectGetWidth(contentView.bounds), @"DXPopover containerView width should be wider than contentView width");
     
     if (!self.blackOverlay) {
-        self.blackOverlay = [[UIControl alloc] initWithFrame:containerView.bounds];
+        self.blackOverlay = [[UIControl alloc] init];
         self.blackOverlay.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     }
+    self.blackOverlay.frame = containerView.bounds;
     UIColor *maskColor;
     switch (self.maskType) {
         case DXPopoverMaskTypeBlack:
@@ -145,8 +146,8 @@
     CGRect atViewFrame = [containerView convertRect:atView.frame toView:containerView];
     
     BOOL upCanContain = CGRectGetMinY(atViewFrame) >= contentViewHeight+betweenArrowAndAtView;
-    BOOL downCanContain = CGRectGetHeight(containerView.bounds) - (CGRectGetMaxX(atViewFrame)+betweenArrowAndAtView) >= contentViewHeight;
-    NSAssert((upCanContain||downCanContain), @"DXPopover no place for the popover show, check contentView and containerView's height");
+    BOOL downCanContain = (CGRectGetHeight(containerView.bounds) - (CGRectGetMaxY(atViewFrame)+betweenArrowAndAtView)) >= contentViewHeight;
+    NSAssert((upCanContain||downCanContain), @"DXPopover no place for the popover show, check atView frame %@ check contentView bounds %@ and containerView's bounds %@", NSStringFromCGRect(atViewFrame), NSStringFromCGRect(contentView.bounds), NSStringFromCGRect(containerView.bounds));
     
     
     CGPoint atPoint = CGPointMake(CGRectGetMidX(atViewFrame), 0);
@@ -244,8 +245,8 @@
                 [self.contentView removeFromSuperview];
                 [self.blackOverlay removeFromSuperview];
                 [self removeFromSuperview];
-                if (self.didDimissHandler) {
-                    self.didDimissHandler();
+                if (self.didDismissHandler) {
+                    self.didDismissHandler();
                 }
             }
         }];

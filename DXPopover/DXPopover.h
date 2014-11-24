@@ -22,12 +22,39 @@ typedef NS_ENUM(NSUInteger, DXPopoverMaskType) {
 
 + (instancetype)popover;
 
+/**
+ *  If the popover is stay up or down the showPoint
+ */
 @property (nonatomic, assign, readonly) DXPopoverPosition popoverPosition;
+
+/**
+ *  The popover arrow size, default is {10.0, 10.0};
+ */
 @property (nonatomic, assign) CGSize arrowSize;
+
+/**
+ *  The popover corner radius, default is 7.0;
+ */
 @property (nonatomic, assign) CGFloat cornerRadius;
+
+/**
+ *  The popover animation show in duration, default is 0.4;
+ */
 @property (nonatomic, assign) CGFloat animationIn;
+
+/**
+ *  The popover animation dismiss duration, default is 0.3;
+ */
 @property (nonatomic, assign) CGFloat animationOut;
+
+/**
+ *  If the drop in animation using spring animation, default is YES;
+ */
 @property (nonatomic, assign) BOOL animationSpring;
+
+/**
+ *  The background of the popover, default is DXPopoverMaskTypeBlack;
+ */
 @property (nonatomic, assign) DXPopoverMaskType maskType;
 
 /**
@@ -41,9 +68,15 @@ typedef NS_ENUM(NSUInteger, DXPopoverMaskType) {
  */
 @property (nonatomic, assign) CGFloat sideEdge;
 
-
+/**
+ *  The callback when popover did show in the containerView
+ */
 @property (nonatomic, copy) dispatch_block_t didShowHandler;
-@property (nonatomic, copy) dispatch_block_t didDimissHandler;
+
+/**
+ *  The callback when popover did dismiss in the containerView;
+ */
+@property (nonatomic, copy) dispatch_block_t didDismissHandler;
 
 /**
  *  Show API

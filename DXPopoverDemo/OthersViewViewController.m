@@ -88,7 +88,7 @@
     switcher.backgroundColor = [UIColor redColor];
     DXPopover *popover = [DXPopover popover];
     [popover showAtView:sender withContentView:self.innerView inView:self.view];
-    popover.didDimissHandler = ^{
+    popover.didDismissHandler = ^{
         self.innerView.layer.cornerRadius = 0.0;
         self.innerView.frame = _brownViewOriginRect;
         [self.outsideView addSubview:self.innerView];
