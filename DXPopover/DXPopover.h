@@ -58,6 +58,11 @@ typedef NS_ENUM(NSUInteger, DXPopoverMaskType) {
 @property (nonatomic, assign) DXPopoverMaskType maskType;
 
 /**
+ *  If the popover has the shadow behind it, default is YES, if you wanna custom the shadow, set it by popover.layer.shadowColor, shadowOffset, shadowOpacity, shadowRadius
+ */
+@property (nonatomic, assign) BOOL applyShadow;
+
+/**
  *  when you using atView show API, this value will be used as the distance between popovers'arrow and atView. Note: this value is invalid when popover show using the atPoint API
  */
 @property (nonatomic, assign) CGFloat betweenAtViewAndArrowHeight;

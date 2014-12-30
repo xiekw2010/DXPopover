@@ -188,19 +188,10 @@ static int j = 1;
 
 - (void)bounceTargetView:(UIView *)targetView
 {
-    [UIView animateWithDuration:0.1 animations:^{
-        targetView.transform = CGAffineTransformMakeScale(0.9, 0.9);
-    } completion:^(BOOL finished) {
-        [UIView animateWithDuration:0.1 animations:^{
-            targetView.transform = CGAffineTransformMakeScale(1.1, 1.1);
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:0.1 animations:^{
-                targetView.transform = CGAffineTransformIdentity;
-            } completion:^(BOOL finished) {
-                
-            }];
-        }];
-    }];
+    targetView.transform = CGAffineTransformMakeScale(0.9, 0.9);
+    [UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:0.3 initialSpringVelocity:5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        targetView.transform = CGAffineTransformIdentity;
+    } completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
