@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/xiekw2010/DXPopover.png)](https://travis-ci.org/xiekw2010/DXPopover)
+
+
 DXPopover
 =========
 
