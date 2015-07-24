@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0962DA4F91D947A79153D05B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BC830A67562995D65156A2 /* libPods.a */; };
 		BE8C1CC11A1F19FE00796E4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8C1CC01A1F19FE00796E4E /* Foundation.framework */; };
 		BE8C1CC31A1F19FE00796E4E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8C1CC21A1F19FE00796E4E /* CoreGraphics.framework */; };
 		BE8C1CC51A1F19FE00796E4E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8C1CC41A1F19FE00796E4E /* UIKit.framework */; };
@@ -20,8 +21,6 @@
 		BE8C1CE41A1F19FE00796E4E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE8C1CE21A1F19FE00796E4E /* InfoPlist.strings */; };
 		BE8C1CE61A1F19FE00796E4E /* DXPopoverDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8C1CE51A1F19FE00796E4E /* DXPopoverDemoTests.m */; };
 		BEC27EE01A1F1A5C0089FFFE /* PopoverDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC27EDF1A1F1A5C0089FFFE /* PopoverDisplayViewController.m */; };
-		BEC27EE31A1F1A680089FFFE /* DXPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC27EE21A1F1A680089FFFE /* DXPopover.m */; };
-		BEC27EEA1A1F212C0089FFFE /* ig20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEC27EE91A1F212C0089FFFE /* ig20.jpg */; };
 		BEC27EEE1A1F2A370089FFFE /* OthersViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC27EEC1A1F2A370089FFFE /* OthersViewViewController.m */; };
 		BEC27EEF1A1F2A370089FFFE /* OthersViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC27EED1A1F2A370089FFFE /* OthersViewViewController.xib */; };
 /* End PBXBuildFile section */
@@ -37,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		71BC830A67562995D65156A2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		77CEAD1270D1791AE9E686E6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		972C2A88D6BCC78031694E9F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BE8C1CBD1A1F19FE00796E4E /* DXPopoverDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DXPopoverDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE8C1CC01A1F19FE00796E4E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BE8C1CC21A1F19FE00796E4E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,9 +57,6 @@
 		BE8C1CE51A1F19FE00796E4E /* DXPopoverDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXPopoverDemoTests.m; sourceTree = "<group>"; };
 		BEC27EDE1A1F1A5C0089FFFE /* PopoverDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverDisplayViewController.h; sourceTree = "<group>"; };
 		BEC27EDF1A1F1A5C0089FFFE /* PopoverDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverDisplayViewController.m; sourceTree = "<group>"; };
-		BEC27EE11A1F1A680089FFFE /* DXPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXPopover.h; sourceTree = "<group>"; };
-		BEC27EE21A1F1A680089FFFE /* DXPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXPopover.m; sourceTree = "<group>"; };
-		BEC27EE91A1F212C0089FFFE /* ig20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ig20.jpg; sourceTree = "<group>"; };
 		BEC27EEB1A1F2A370089FFFE /* OthersViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OthersViewViewController.h; sourceTree = "<group>"; };
 		BEC27EEC1A1F2A370089FFFE /* OthersViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OthersViewViewController.m; sourceTree = "<group>"; };
 		BEC27EED1A1F2A370089FFFE /* OthersViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OthersViewViewController.xib; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 				BE8C1CC31A1F19FE00796E4E /* CoreGraphics.framework in Frameworks */,
 				BE8C1CC51A1F19FE00796E4E /* UIKit.framework in Frameworks */,
 				BE8C1CC11A1F19FE00796E4E /* Foundation.framework in Frameworks */,
+				0962DA4F91D947A79153D05B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,14 +87,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		011E8AA3BF0A8B8F487E4B3F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				972C2A88D6BCC78031694E9F /* Pods.debug.xcconfig */,
+				77CEAD1270D1791AE9E686E6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BE8C1CB41A1F19FE00796E4E = {
 			isa = PBXGroup;
 			children = (
-				BEC27EDD1A1F1A450089FFFE /* DXPopover */,
 				BE8C1CC61A1F19FE00796E4E /* DXPopoverDemo */,
 				BE8C1CDF1A1F19FE00796E4E /* DXPopoverDemoTests */,
 				BE8C1CBF1A1F19FE00796E4E /* Frameworks */,
 				BE8C1CBE1A1F19FE00796E4E /* Products */,
+				011E8AA3BF0A8B8F487E4B3F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +123,7 @@
 				BE8C1CC21A1F19FE00796E4E /* CoreGraphics.framework */,
 				BE8C1CC41A1F19FE00796E4E /* UIKit.framework */,
 				BE8C1CD91A1F19FE00796E4E /* XCTest.framework */,
+				71BC830A67562995D65156A2 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,7 +139,6 @@
 				BE8C1CCF1A1F19FE00796E4E /* DXAppDelegate.h */,
 				BE8C1CD01A1F19FE00796E4E /* DXAppDelegate.m */,
 				BE8C1CD21A1F19FE00796E4E /* Images.xcassets */,
-				BEC27EE91A1F212C0089FFFE /* ig20.jpg */,
 				BE8C1CC71A1F19FE00796E4E /* Supporting Files */,
 			);
 			path = DXPopoverDemo;
@@ -164,15 +173,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BEC27EDD1A1F1A450089FFFE /* DXPopover */ = {
-			isa = PBXGroup;
-			children = (
-				BEC27EE11A1F1A680089FFFE /* DXPopover.h */,
-				BEC27EE21A1F1A680089FFFE /* DXPopover.m */,
-			);
-			path = DXPopover;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,9 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE8C1CE91A1F19FE00796E4E /* Build configuration list for PBXNativeTarget "DXPopoverDemo" */;
 			buildPhases = (
+				CDF12C45D18F7A16652437F1 /* Check Pods Manifest.lock */,
 				BE8C1CB91A1F19FE00796E4E /* Sources */,
 				BE8C1CBA1A1F19FE00796E4E /* Frameworks */,
 				BE8C1CBB1A1F19FE00796E4E /* Resources */,
+				4F01EB2F65C6E00E524BCC65 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,7 +252,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE8C1CCB1A1F19FE00796E4E /* InfoPlist.strings in Resources */,
-				BEC27EEA1A1F212C0089FFFE /* ig20.jpg in Resources */,
 				BEC27EEF1A1F2A370089FFFE /* OthersViewViewController.xib in Resources */,
 				BE8C1CD31A1F19FE00796E4E /* Images.xcassets in Resources */,
 			);
@@ -266,6 +267,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4F01EB2F65C6E00E524BCC65 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDF12C45D18F7A16652437F1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BE8C1CB91A1F19FE00796E4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -273,7 +307,6 @@
 			files = (
 				BEC27EEE1A1F2A370089FFFE /* OthersViewViewController.m in Sources */,
 				BE8C1CD11A1F19FE00796E4E /* DXAppDelegate.m in Sources */,
-				BEC27EE31A1F1A680089FFFE /* DXPopover.m in Sources */,
 				BEC27EE01A1F1A5C0089FFFE /* PopoverDisplayViewController.m in Sources */,
 				BE8C1CCD1A1F19FE00796E4E /* main.m in Sources */,
 			);
@@ -391,9 +424,14 @@
 		};
 		BE8C1CEA1A1F19FE00796E4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 972C2A88D6BCC78031694E9F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DXPopoverDemo/DXPopoverDemo-Prefix.pch";
 				INFOPLIST_FILE = "DXPopoverDemo/DXPopoverDemo-Info.plist";
@@ -405,9 +443,14 @@
 		};
 		BE8C1CEB1A1F19FE00796E4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77CEAD1270D1791AE9E686E6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DXPopoverDemo/DXPopoverDemo-Prefix.pch";
 				INFOPLIST_FILE = "DXPopoverDemo/DXPopoverDemo-Info.plist";

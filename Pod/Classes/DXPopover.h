@@ -14,13 +14,17 @@ typedef NS_ENUM(NSUInteger, DXPopoverPosition) {
 
 typedef NS_ENUM(NSUInteger, DXPopoverMaskType) {
     DXPopoverMaskTypeBlack,
-    DXPopoverMaskTypeNone,
+    DXPopoverMaskTypeNone,  // overlay does not respond to touch
 };
-
 
 @interface DXPopover : UIView
 
 + (instancetype)popover;
+
+/**
+ *  The contentView positioned in container, default is zero;
+ */
+@property (nonatomic, assign) UIEdgeInsets contentInset;
 
 /**
  *  If the popover is stay up or down the showPoint
@@ -58,15 +62,25 @@ typedef NS_ENUM(NSUInteger, DXPopoverMaskType) {
 @property (nonatomic, assign) DXPopoverMaskType maskType;
 
 /**
- *  If the popover has the shadow behind it, default is YES, if you wanna custom the shadow, set it by popover.layer.shadowColor, shadowOffset, shadowOpacity, shadowRadius
+ *  If maskType does not satisfy your need, use blackoverylay to control the touch
+ * event(userInterfaceEnabled) for
+ * background color
+ */
+@property (nonatomic, strong, readonly) UIControl *blackOverlay;
+
+/**
+ *  If the popover has the shadow behind it, default is YES, if you wanna custom the shadow, set it
+ * by
+ * popover.layer.shadowColor, shadowOffset, shadowOpacity, shadowRadius
  */
 @property (nonatomic, assign) BOOL applyShadow;
 
 /**
- *  when you using atView show API, this value will be used as the distance between popovers'arrow and atView. Note: this value is invalid when popover show using the atPoint API
+ *  when you using atView show API, this value will be used as the distance between popovers'arrow
+ * and atView. Note:
+ * this value is invalid when popover show using the atPoint API
  */
 @property (nonatomic, assign) CGFloat betweenAtViewAndArrowHeight;
-
 
 /**
  * Decide the nearest edge between the containerView's border and popover, default is 4.0
@@ -91,36 +105,50 @@ typedef NS_ENUM(NSUInteger, DXPopoverMaskType) {
  *  @param contentView   the contentView to show
  *  @param containerView the containerView to contain
  */
-- (void)showAtPoint:(CGPoint)point popoverPostion:(DXPopoverPosition)position withContentView:(UIView *)contentView inView:(UIView *)containerView;
+- (void)showAtPoint:(CGPoint)point
+     popoverPostion:(DXPopoverPosition)position
+    withContentView:(UIView *)contentView
+             inView:(UIView *)containerView;
 
 /**
  *  Lazy show API        The show point will be caluclated for you, try it!
  *
  *  @param atView        The view to show at
- *  @param position      stay up or stay down from the atView, if up or down size is not enough for contentView, then it will be set correctly auto.
+ *  @param position      stay up or stay down from the atView, if up or down size is not enough for
+ * contentView, then it
+ * will be set correctly auto.
  *  @param contentView   the contentView to show
  *  @param containerView the containerView to contain
  */
-- (void)showAtView:(UIView *)atView popoverPostion:(DXPopoverPosition)position withContentView:(UIView *)contentView inView:(UIView *)containerView;
+- (void)showAtView:(UIView *)atView
+    popoverPostion:(DXPopoverPosition)position
+   withContentView:(UIView *)contentView
+            inView:(UIView *)containerView;
 
 /**
  *  Lazy show API        The show point and show position will be caluclated for you, try it!
  *
  *  @param atView        The view to show at
  *  @param contentView   the contentView to show
- *  @param containerView the containerView to contain 
+ *  @param containerView the containerView to contain
  */
-- (void)showAtView:(UIView *)atView withContentView:(UIView *)contentView inView:(UIView *)containerView;
+- (void)showAtView:(UIView *)atView
+   withContentView:(UIView *)contentView
+            inView:(UIView *)containerView;
 
 /**
- *  Lazy show API        The show point and show position will be caluclated for you, using application's keyWindow as containerView, try it!
+ *  Lazy show API        The show point and show position will be caluclated for you, using
+ * application's keyWindow as
+ * containerView, try it!
  *
  *  @param atView        The view to show at
  *  @param contentView   the contentView to show
  */
 - (void)showAtView:(UIView *)atView withContentView:(UIView *)contentView;
 
-- (void)dismiss;
+- (void)showAtView:(UIView *)atView withText:(NSAttributedString *)abs;
+- (void)showAtView:(UIView *)atView withText:(NSAttributedString *)abs inView:(UIView *)container;
 
+- (void)dismiss;
 
 @end

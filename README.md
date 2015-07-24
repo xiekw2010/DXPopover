@@ -1,14 +1,26 @@
-[![Build Status](https://travis-ci.org/xiekw2010/DXPopover.png)](https://travis-ci.org/xiekw2010/DXPopover)
+# DXPopover
 
+[![CI Status](http://img.shields.io/travis/xiekw2010/DXPopover.svg?style=flat)](https://travis-ci.org/xiekw2010/DXPopover)
+[![Version](https://img.shields.io/cocoapods/v/DXPopover.svg?style=flat)](http://cocoapods.org/pods/DXPopover)
+[![License](https://img.shields.io/cocoapods/l/DXPopover.svg?style=flat)](http://cocoapods.org/pods/DXPopover)
+[![Platform](https://img.shields.io/cocoapods/p/DXPopover.svg?style=flat)](http://cocoapods.org/pods/DXPopover)
 
-DXPopover
-=========
-
-A Popover mimic Facebook  app popover using UIKit.
+A Popover mimic Facebook app popover using UIKit.
 
 The concept of this popover is very simple: add your contentView in a popover, then show the popover in the container view.
 
+## Requirements
 
+`iOS ~> 6.0`
+
+## Installation
+
+DXPopover is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "DXPopover"
+```
 
 ##Screenshot
 ![DXPopover](./popover.gif)
@@ -43,6 +55,11 @@ eg:
         [weakSelf bounceTargetView:titleView];
     };
 
+
+
+## License
+
+DXPopover is available under the MIT license. See the LICENSE file for more info.
 
 
 

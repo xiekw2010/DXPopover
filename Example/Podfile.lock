@@ -1,0 +1,14 @@
+PODS:
+  - DXPopover (0.1.0)
+
+DEPENDENCIES:
+  - DXPopover (from `..`)
+
+EXTERNAL SOURCES:
+  DXPopover:
+    :path: ..
+
+SPEC CHECKSUMS:
+  DXPopover: ebe1b01f58de58d6f837698e404cae09c3fea499
+
+COCOAPODS: 0.35.0
