@@ -1,0 +1,2 @@
+language: objective-c
+script: xcodebuild -workspace DXPopoverDemo.xcworkspace -scheme DXPopoverDemo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO

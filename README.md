@@ -1,6 +1,5 @@
 # DXPopover
 
-[![CI Status](http://img.shields.io/travis/xiekw2010/DXPopover.svg?style=flat)](https://travis-ci.org/xiekw2010/DXPopover)
 [![Version](https://img.shields.io/cocoapods/v/DXPopover.svg?style=flat)](http://cocoapods.org/pods/DXPopover)
 [![License](https://img.shields.io/cocoapods/l/DXPopover.svg?style=flat)](http://cocoapods.org/pods/DXPopover)
 [![Platform](https://img.shields.io/cocoapods/p/DXPopover.svg?style=flat)](http://cocoapods.org/pods/DXPopover)
