@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0962DA4F91D947A79153D05B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BC830A67562995D65156A2 /* libPods.a */; };
+		BE3399BC1BB2C3BB0084F22D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3399BB1BB2C3BB0084F22D /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		BE8C1CC11A1F19FE00796E4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8C1CC01A1F19FE00796E4E /* Foundation.framework */; };
 		BE8C1CC31A1F19FE00796E4E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8C1CC21A1F19FE00796E4E /* CoreGraphics.framework */; };
 		BE8C1CC51A1F19FE00796E4E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8C1CC41A1F19FE00796E4E /* UIKit.framework */; };
@@ -39,6 +40,7 @@
 		71BC830A67562995D65156A2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CEAD1270D1791AE9E686E6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		972C2A88D6BCC78031694E9F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BE3399BB1BB2C3BB0084F22D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		BE8C1CBD1A1F19FE00796E4E /* DXPopoverDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DXPopoverDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE8C1CC01A1F19FE00796E4E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BE8C1CC21A1F19FE00796E4E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -140,6 +142,7 @@
 				BE8C1CD01A1F19FE00796E4E /* DXAppDelegate.m */,
 				BE8C1CD21A1F19FE00796E4E /* Images.xcassets */,
 				BE8C1CC71A1F19FE00796E4E /* Supporting Files */,
+				BE3399BB1BB2C3BB0084F22D /* Launch Screen.storyboard */,
 			);
 			path = DXPopoverDemo;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			files = (
 				BE8C1CCB1A1F19FE00796E4E /* InfoPlist.strings in Resources */,
 				BEC27EEF1A1F2A370089FFFE /* OthersViewViewController.xib in Resources */,
+				BE3399BC1BB2C3BB0084F22D /* Launch Screen.storyboard in Resources */,
 				BE8C1CD31A1F19FE00796E4E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
