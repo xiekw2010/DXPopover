@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *middleBtn;
 @property (weak, nonatomic) IBOutlet UIButton *bottomRightBtn;
 @property (weak, nonatomic) IBOutlet UIButton *bottomLeftBtn;
+@property (weak, nonatomic) IBOutlet UIButton *middleLeftBtn;
 
 @property (nonatomic, strong) UIView *outsideView;
 @property (nonatomic, strong) UIView *innerView;
@@ -60,6 +61,18 @@
     UISegmentedControl *switcher = [[UISegmentedControl alloc] initWithItems:@[ @"You", @"Me" ]];
     DXPopover *popover = [DXPopover popover];
     [popover showAtView:sender withContentView:switcher inView:self.view];
+}
+
+// show an xibfile
+- (IBAction)middleLeft:(id)sender {
+    //拿出xib视图
+    NSArray  *apparray= [[NSBundle mainBundle]loadNibNamed:@"XibFile" owner:nil options:nil];
+    UIView *appview=[apparray firstObject];
+    
+    
+    DXPopover *popover = [DXPopover popover];
+    [popover showAtView:sender withContentView:appview];
+    
 }
 
 // Note: Here if you don't give the position down, then it will show on up, because the atView's

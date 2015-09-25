@@ -72,6 +72,11 @@
 }
 
 - (void)_setup {
+    if(self.frame.origin.x!=0||self.frame.origin.y!=0||self.frame.size.width!=0||self.frame.size.height!=0)
+    {
+        return;
+    }
+    
     CGRect frame = self.contentViewFrame;
 
     CGFloat frameMidx = self.arrowShowPoint.x - CGRectGetWidth(frame) * 0.5;
