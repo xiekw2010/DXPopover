@@ -52,8 +52,9 @@
     self.contentColor = backgroundColor;
 }
 
-- (id)initWithFrame:(CGRect)frame {
-    return [self init];
+-(id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    return self;
 }
 
 - (void)setApplyShadow:(BOOL)applyShadow {
