@@ -23,6 +23,7 @@
 
 @implementation DXPopover {
     BOOL _isiOS7;
+    BOOL _breakDeathCycle;
 }
 
 + (instancetype)popover {
@@ -32,19 +33,41 @@
 - (instancetype)init {
     self = [super initWithFrame:CGRectZero];
     if (self) {
-        _isiOS7 = ([[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending);
-        self.arrowSize = CGSizeMake(11.0, 9.0);
-        self.cornerRadius = 5.0;
-        self.backgroundColor = [UIColor whiteColor];
-        self.animationIn = 0.4;
-        self.animationOut = 0.3;
-        self.animationSpring = YES;
-        self.sideEdge = 10.0;
-        self.maskType = DXPopoverMaskTypeBlack;
-        self.betweenAtViewAndArrowHeight = 4.0;
-        self.applyShadow = YES;
+        [self commonInit];
     }
     return self;
+}
+
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:CGRectZero];
+    if (self) {
+        [self commonInit];
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self commonInit];
+    }
+    
+    return self;
+}
+
+- (void)commonInit {
+    _isiOS7 = ([[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending);
+    self.arrowSize = CGSizeMake(11.0, 9.0);
+    self.cornerRadius = 5.0;
+    self.backgroundColor = [UIColor whiteColor];
+    self.animationIn = 0.4;
+    self.animationOut = 0.3;
+    self.animationSpring = YES;
+    self.sideEdge = 10.0;
+    self.maskType = DXPopoverMaskTypeBlack;
+    self.betweenAtViewAndArrowHeight = 4.0;
+    self.applyShadow = YES;
 }
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor {
@@ -52,10 +75,6 @@
     self.contentColor = backgroundColor;
 }
 
--(id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    return self;
-}
 
 - (void)setApplyShadow:(BOOL)applyShadow {
     _applyShadow = applyShadow;
@@ -73,8 +92,7 @@
 }
 
 - (void)_setup {
-    if(self.frame.origin.x!=0||self.frame.origin.y!=0||self.frame.size.width!=0||self.frame.size.height!=0)
-    {
+    if (_breakDeathCycle==NO) {
         return;
     }
     
@@ -123,6 +141,7 @@
 
     frame.size.height += self.arrowSize.height;
     self.frame = frame;
+    _breakDeathCycle=NO;
 }
 
 - (void)showAtPoint:(CGPoint)point
@@ -253,6 +272,7 @@
 }
 
 - (void)show {
+    _breakDeathCycle=YES;
     [self setNeedsDisplay];
 
     CGRect contentViewFrame = self.contentView.frame;
