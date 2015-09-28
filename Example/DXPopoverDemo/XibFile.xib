@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14E33b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="fTg-Vm-rws">
+            <rect key="frame" x="0.0" y="0.0" width="158" height="157"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8p-tq-f2d">
+                    <rect key="frame" x="57" y="8" width="45" height="30"/>
+                    <state key="normal" title="button"/>
+                </button>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v2c-mc-Klx">
+                    <rect key="frame" x="55" y="63" width="51" height="31"/>
+                </switch>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.70794599499999999" blue="0.57305345490000004" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="c8p-tq-f2d" firstAttribute="top" secondItem="fTg-Vm-rws" secondAttribute="top" constant="8" id="UdZ-XI-heW"/>
+                <constraint firstItem="v2c-mc-Klx" firstAttribute="centerY" secondItem="fTg-Vm-rws" secondAttribute="centerY" id="ijb-T9-03T"/>
+                <constraint firstItem="c8p-tq-f2d" firstAttribute="centerX" secondItem="fTg-Vm-rws" secondAttribute="centerX" id="m2f-gy-hRS"/>
+                <constraint firstItem="v2c-mc-Klx" firstAttribute="centerX" secondItem="fTg-Vm-rws" secondAttribute="centerX" id="mT9-zr-vLe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="193" y="549.5"/>
+        </view>
+    </objects>
+</document>

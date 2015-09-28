@@ -24,6 +24,7 @@
 		BEC27EE01A1F1A5C0089FFFE /* PopoverDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC27EDF1A1F1A5C0089FFFE /* PopoverDisplayViewController.m */; };
 		BEC27EEE1A1F2A370089FFFE /* OthersViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC27EEC1A1F2A370089FFFE /* OthersViewViewController.m */; };
 		BEC27EEF1A1F2A370089FFFE /* OthersViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC27EED1A1F2A370089FFFE /* OthersViewViewController.xib */; };
+		F15CF1481BB53BE800B51651 /* XibFile.xib in Resources */ = {isa = PBXBuildFile; fileRef = F15CF1471BB53BE800B51651 /* XibFile.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		BEC27EEB1A1F2A370089FFFE /* OthersViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OthersViewViewController.h; sourceTree = "<group>"; };
 		BEC27EEC1A1F2A370089FFFE /* OthersViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OthersViewViewController.m; sourceTree = "<group>"; };
 		BEC27EED1A1F2A370089FFFE /* OthersViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OthersViewViewController.xib; sourceTree = "<group>"; };
+		F15CF1471BB53BE800B51651 /* XibFile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XibFile.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				BE8C1CD21A1F19FE00796E4E /* Images.xcassets */,
 				BE8C1CC71A1F19FE00796E4E /* Supporting Files */,
 				BE3399BB1BB2C3BB0084F22D /* Launch Screen.storyboard */,
+				F15CF1471BB53BE800B51651 /* XibFile.xib */,
 			);
 			path = DXPopoverDemo;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				BEC27EEF1A1F2A370089FFFE /* OthersViewViewController.xib in Resources */,
 				BE3399BC1BB2C3BB0084F22D /* Launch Screen.storyboard in Resources */,
 				BE8C1CD31A1F19FE00796E4E /* Images.xcassets in Resources */,
+				F15CF1481BB53BE800B51651 /* XibFile.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
