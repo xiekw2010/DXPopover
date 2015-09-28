@@ -23,7 +23,7 @@
 
 @implementation DXPopover {
     BOOL _isiOS7;
-    BOOL _breakDeathCycle;
+    BOOL _setNeedsReset;
 }
 
 + (instancetype)popover {
@@ -92,7 +92,7 @@
 }
 
 - (void)_setup {
-    if (_breakDeathCycle==NO) {
+    if (_setNeedsReset==NO) {
         return;
     }
     
@@ -141,7 +141,7 @@
 
     frame.size.height += self.arrowSize.height;
     self.frame = frame;
-    _breakDeathCycle=NO;
+    _setNeedsReset=NO;
 }
 
 - (void)showAtPoint:(CGPoint)point
@@ -272,7 +272,7 @@
 }
 
 - (void)show {
-    _breakDeathCycle=YES;
+    _setNeedsReset=YES;
     [self setNeedsDisplay];
 
     CGRect contentViewFrame = self.contentView.frame;
