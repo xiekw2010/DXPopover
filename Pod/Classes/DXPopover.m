@@ -92,7 +92,7 @@
 }
 
 - (void)_setup {
-    if (_setNeedsReset==NO) {
+    if (_setNeedsReset == NO) {
         return;
     }
     
@@ -141,7 +141,7 @@
 
     frame.size.height += self.arrowSize.height;
     self.frame = frame;
-    _setNeedsReset=NO;
+    _setNeedsReset = NO;
 }
 
 - (void)showAtPoint:(CGPoint)point
@@ -272,7 +272,7 @@
 }
 
 - (void)show {
-    _setNeedsReset=YES;
+    _setNeedsReset = YES;
     [self setNeedsDisplay];
 
     CGRect contentViewFrame = self.contentView.frame;

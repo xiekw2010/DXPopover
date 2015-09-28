@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "DXPopover"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "A Popover mimic Facebook  app popover using UIKit."
   s.description      = <<-DESC
                        A Popover mimic Facebook  app popover using UIKit.
