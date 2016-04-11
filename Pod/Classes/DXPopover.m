@@ -215,7 +215,7 @@
             inView:(UIView *)containerView {
     CGFloat betweenArrowAndAtView = self.betweenAtViewAndArrowHeight;
     CGFloat contentViewHeight = CGRectGetHeight(contentView.bounds);
-    CGRect atViewFrame = [containerView convertRect:atView.frame toView:containerView];
+    CGRect atViewFrame = [atView convertRect:atView.bounds toView:containerView];
 
     BOOL upCanContain = CGRectGetMinY(atViewFrame) >= contentViewHeight + betweenArrowAndAtView;
     BOOL downCanContain =
