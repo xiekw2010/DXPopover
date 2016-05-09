@@ -65,7 +65,7 @@
     self.animationOut = 0.3;
     self.animationSpring = YES;
     self.sideEdge = 10.0;
-    self.maskType = DXPopoverMaskTypeBlack;
+    self.maskColor = [UIColor colorWithWhite:0.0 alpha:0.3];
     self.betweenAtViewAndArrowHeight = 4.0;
     self.applyShadow = YES;
 }
@@ -168,21 +168,7 @@
             UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     }
     self.blackOverlay.frame = containerView.bounds;
-
-    UIColor *maskColor;
-    switch (self.maskType) {
-        case DXPopoverMaskTypeBlack:
-            maskColor = [UIColor colorWithWhite:0.0 alpha:0.3];
-            break;
-        case DXPopoverMaskTypeNone: {
-            maskColor = [UIColor clearColor];
-            self.blackOverlay.userInteractionEnabled = NO;
-        } break;
-        default:
-            break;
-    }
-
-    self.blackOverlay.backgroundColor = maskColor;
+    self.blackOverlay.backgroundColor = self.maskColor;
 
     [containerView addSubview:self.blackOverlay];
     [self.blackOverlay addTarget:self
