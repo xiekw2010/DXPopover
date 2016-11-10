@@ -22,7 +22,6 @@
 @end
 
 @implementation DXPopover {
-    BOOL _isiOS7;
     BOOL _setNeedsReset;
 }
 
@@ -57,7 +56,6 @@
 }
 
 - (void)commonInit {
-    _isiOS7 = ([[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending);
     self.arrowSize = CGSizeMake(11.0, 9.0);
     self.cornerRadius = 5.0;
     self.backgroundColor = [UIColor whiteColor];
@@ -289,7 +287,7 @@
     [self.containerView addSubview:self];
 
     self.transform = CGAffineTransformMakeScale(0.0, 0.0);
-    if (self.animationSpring && _isiOS7) {
+    if (self.animationSpring) {
         [UIView animateWithDuration:self.animationIn
             delay:0
             usingSpringWithDamping:0.7
