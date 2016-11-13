@@ -12,11 +12,6 @@ typedef NS_ENUM(NSUInteger, DXPopoverPosition) {
     DXPopoverPositionDown,
 };
 
-typedef NS_ENUM(NSUInteger, DXPopoverMaskType) {
-    DXPopoverMaskTypeBlack,
-    DXPopoverMaskTypeNone,  // overlay does not respond to touch
-};
-
 @interface DXPopover : UIView
 
 + (instancetype)popover;
@@ -57,9 +52,9 @@ typedef NS_ENUM(NSUInteger, DXPopoverMaskType) {
 @property (nonatomic, assign) BOOL animationSpring;
 
 /**
- *  The background of the popover, default is DXPopoverMaskTypeBlack;
+ *  The backgroundcolor of the popover, default is [UIColor colorWithWhite:0.0 alpha:0.3];
  */
-@property (nonatomic, assign) DXPopoverMaskType maskType;
+@property (nonatomic, strong) UIColor *maskColor;
 
 /**
  *  If maskType does not satisfy your need, use blackoverylay to control the touch
